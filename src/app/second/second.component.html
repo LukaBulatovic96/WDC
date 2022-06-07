@@ -1,0 +1,110 @@
+<!-- toolbar -->
+
+<div class="topnav">
+
+ <a id="deadLink">WDC</a>
+
+ <div class="topnav-right">
+   <a href="/customer">Customers</a>
+ </div>
+
+</div>
+
+<!-- toolbar -->
+
+<section class="layout">
+
+  <div class="sidebar">
+    <div class="selectWrapper">
+      <select  [(ngModel)]="selectedCustomer" (change)="onChange()">
+        <option *ngFor="let customer of customers" [ngValue]="customer">{{customer.name}}</option>
+      </select>
+    </div>
+
+    <div class="selectWrapper">
+      <select [(ngModel)]="selectedComodity" (change)="onChange()">
+        <option *ngFor="let commodity of commodities" [ngValue]="commodity">{{commodity.commodity}} </option>
+      </select>
+    </div>
+
+    <input type="number" [formControl]="quantity" name="quantity" (ngModelChange)="onChange()">
+    <p *ngIf="quantity && quantity.invalid && quantity.touched" class="invalidInput">Invalid input</p>
+  </div>
+
+  <div class="body">
+    <div class="commodityCard">
+      <table>
+        <tr>
+          <th>
+            Customer:
+          </th>
+          <td>
+            {{selectedCustomer.name}} {{selectedCustomer.surname}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Comodity:
+          </th>
+          <td>
+            {{selectedComodity.commodity}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Quantity:
+          </th>
+          <td>
+            {{quantity.value}} {{selectedComodity.unit}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Price:
+          </th>
+          <td>
+            {{basePrice.toFixed(2)}} {{selectedComodity.currency}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Cooperation Discount:
+          </th>
+          <td>
+            {{cooperationDiscount}}%
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Quantity Discount:
+          </th>
+          <td>
+            {{quantityDiscount}}%
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Total Discount:
+          </th>
+          <td>
+            {{priceReduction.toFixed(2)}} {{selectedComodity.currency}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Total Price:
+          </th>
+          <td>
+            {{totalPrice.toFixed(2)}} {{selectedComodity.currency}}
+          </td>
+        </tr>
+
+
+      </table>
+
+
+
+    </div>
+  </div>
+
+</section>

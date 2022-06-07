@@ -1,0 +1,158 @@
+.centerInside{
+  //text-align: center;
+}
+
+.customerDiv{
+  margin: auto;
+  width: 50%;
+  margin-top: 1em;
+  border: 3px solid #3a3;
+  background-color: #bfb;
+  text-align: center;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". discountGroup"
+    ". discountGroup";
+  align-content: space-evenly;
+
+}
+
+.customerDiv:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.discountGroup{
+  grid-area: discountGroup;
+}
+
+.editButton {
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.editButton:hover {
+  background-color: 	#999900;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#addCustomerButtonWrapper{
+  margin: auto;
+  width: 40%;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#addCustomerButton{
+  width: 100%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+#addCustomerButton:hover{
+  background-color: 	#999900;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+th, td {
+  border: 1px solid;
+}
+table{
+  width: 100%;
+}
+
+.topnav {
+  position: relative;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#deadLink{
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+}
+
+#deadLink:hover{
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .customerDiv{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}

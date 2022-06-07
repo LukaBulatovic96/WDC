@@ -1,0 +1,31 @@
+{
+  "commodity" : [
+  {
+      "id":1,
+      "commodity":"milk",
+      "quantity": 100,
+      "unit":"l",
+      "discount":20,
+      "price":1.2,
+      "currency":"EUR"
+    },
+    {
+      "id":2,
+      "commodity": "chocolate",
+      "discount":12,
+      "quantity": 50,
+      "unit": "kg",
+      "price":2.2,
+      "currency":"EUR"
+    },
+    {
+      "id":3,
+      "commodity": "flower",
+      "quantity": 100,
+      "unit":"l",
+      "discount":12,
+      "price":1.2,
+      "currency":"EUR"
+    }
+  ]
+  }

@@ -1,0 +1,56 @@
+
+<!-- Top navigation -->
+<div class="topnav">
+
+
+ <!-- Left-aligned links (default) -->
+ <a id="deadLink">WDC</a>
+
+ <!-- Centered link -->
+ <div class="topnav-centered">
+   <a id="deadLink">
+     <input type="text" [(ngModel)]="filterText" (keyup)="updateCustomersList()">
+   </a>
+ </div>
+
+ <!-- Right-aligned links -->
+ <div class="topnav-right">
+   <a href="/second">Discount</a>
+ </div>
+
+</div>
+
+<div id="addCustomerButtonWrapper">
+<button (click)="openNewCustomerDialog()" id="addCustomerButton">Add Customer</button>
+</div>
+
+
+<div *ngFor="let customer of customers " class="customerDiv">
+  <div class="">
+    <h3>{{customer.name}} {{customer.surname}}</h3>
+  </div>
+  <div class="discountGroup">
+
+    <table>
+      <tr>
+        <th>Commodity</th>
+        <th>Discount</th>
+      </tr>
+      <tr  *ngFor="let discount of customer.discount ">
+        <td>{{discount.commodity}}</td>
+        <td>{{discount.percentage}}%</td>
+      </tr>
+    </table>
+
+  </div>
+  <div class="">
+    <h4>Id: {{customer.id}}
+      <span>
+      <button (click)="openEditCustomerDialog(customer)" class="editButton">Edit</button>
+      </span>
+    </h4>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,69 @@
+{
+  "customers": [
+    {
+      "name": "David",
+      "surname": "Jason",
+      "id": 1,
+      "discount": [
+        {
+          "percentage": "10",
+          "commodity": "milk",
+          "commodityId": 1
+        }
+      ]
+    },
+    {
+      "name": "Jane",
+      "surname": "Smith",
+      "id": 2,
+      "discount": [
+        {
+          "percentage": 10,
+          "commodity": "chocolate",
+          "commodityId": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Merry",
+      "surname": "Kelson",
+      "discount": [
+        {
+          "percentage": 12,
+          "commodity": "flower",
+          "commodityId": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Briana",
+      "surname": "Briggs",
+      "discount": [
+        {
+          "percentage": "12",
+          "commodity": "flower",
+          "commodityId": 3
+        },
+        {
+          "percentage": "8",
+          "commodity": "milk",
+          "commodityId": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Michael",
+      "surname": "Moor",
+      "discount": [
+        {
+          "percentage": "12",
+          "commodity": "flower",
+          "commodityId": 3
+        }
+      ]
+    }
+  ]
+}

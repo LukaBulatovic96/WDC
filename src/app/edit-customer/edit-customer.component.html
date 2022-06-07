@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="centered">
+      <h2>Edit Customer</h2>
+  </div>
+  <div class="">
+    <label for="name">Name:</label>
+    <input type="text" [formControl]="name" name="name">
+    <p *ngIf="name && name.invalid && name.touched" class="invalidInput">Invalid input</p>
+  </div>
+  <div class="">
+    <label for="surname">Surname:</label>
+    <input type="text" [formControl]="surname" name="surname">
+    <p *ngIf="surname && surname.invalid && surname.touched" class="invalidInputSpan">Invalid input</p>
+  </div>
+  <div class="">
+    <button class="button50" (click)="editCustomer()" mat-button mat-dialog-close [disabled]="name.invalid || surname.invalid">Confirm</button>
+    <button class="button50" (click)="closeDialog()" mat-button mat-dialog-close>Cancel</button>
+  </div>
+
+</div>
